@@ -7,10 +7,15 @@ Website đã được lập trình để **tự động hiển thị ảnh khi f
 1. Chuẩn bị một ảnh chân dung, đặt tên đúng là `tony-profile.jpg`
    - Định dạng: JPG (nếu ảnh là PNG, đổi tên đuôi không đủ — hãy convert sang JPG thật).
    - Khuyến nghị: ảnh vuông, tối thiểu 400×400px, dung lượng < 300KB.
-2. Copy file vào thư mục:
+2. Copy file vào đúng thư mục này trên máy của bạn (đường dẫn đầy đủ):
    ```
-   training-impact-dashboard-course\public\images\tony-profile.jpg
+   C:\Users\admin\OneDrive - JAPFA\Desktop\Claude Projects\training-impact-dashboard-course\public\images\
    ```
+   Sau khi copy, file ảnh phải nằm ở:
+   ```
+   C:\Users\admin\OneDrive - JAPFA\Desktop\Claude Projects\training-impact-dashboard-course\public\images\tony-profile.jpg
+   ```
+   (Cùng cấp với thư mục con `training-impact-course` — KHÔNG đặt vào trong thư mục con đó.)
 3. Commit và push để cập nhật website đang chạy trên Vercel:
    ```bash
    git add public/images/tony-profile.jpg

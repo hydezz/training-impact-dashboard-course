@@ -270,12 +270,12 @@ export default function LandingPage() {
                   ✉ nhanhd.1505@gmail.com
                 </a>
                 <a
-                  href="https://github.com/hydezz"
+                  href="https://www.linkedin.com/in/hadinhnhan"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-medium text-brand-700 hover:underline"
                 >
-                  ⌂ github.com/hydezz
+                  in linkedin.com/in/hadinhnhan
                 </a>
               </div>
               <p className="mt-2 text-xs text-slate-400">
