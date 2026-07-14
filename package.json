@@ -1,0 +1,33 @@
+{
+  "name": "training-impact-dashboard-course",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Measure Training Impact with Kirkpatrick, Excel and AI - a 120-minute applied course with a Learning Impact Dashboard",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "generate-training-data": "node scripts/generate-training-impact-data.mjs",
+    "verify-course-duration": "node scripts/verify-course-duration.mjs"
+  },
+  "dependencies": {
+    "next": "15.3.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "recharts": "^2.15.3"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@tailwindcss/postcss": "^4.1.10",
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "eslint": "^9.28.0",
+    "eslint-config-next": "15.3.4",
+    "exceljs": "^4.4.0",
+    "tailwindcss": "^4.1.10",
+    "typescript": "^5.8.3"
+  }
+}

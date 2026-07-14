@@ -1,0 +1,16 @@
+{
+  "note": "Toàn bộ visual của khóa học (Kirkpatrick pyramid, journey map, KPI families, dashboard anatomy, v.v.) được tự thiết kế bằng React/SVG/CSS trong src/components/course/Visuals.tsx — không dùng ảnh bên ngoài, không copy diagram có bản quyền.",
+  "images": [
+    {
+      "filename": "tony-profile.jpg",
+      "status": "PENDING - chưa có ảnh thật",
+      "sourcePage": "Do chủ sở hữu khóa học cung cấp",
+      "creator": "Nhan Ha (Tony)",
+      "license": "Ảnh cá nhân của instructor",
+      "module": "Landing page - Instructor section",
+      "altText": "Chân dung Nhan Ha (Tony), Learning & Talent Development Leader",
+      "downloadDate": null,
+      "currentFallback": "Placeholder chữ 'TH' trong vòng tròn (không phải khuôn mặt AI, không broken image)"
+    }
+  ]
+}
