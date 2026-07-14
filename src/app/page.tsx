@@ -1,9 +1,39 @@
 "use client";
 
 import Link from "next/link";
-import { courseModules, totalCourseMinutes, INSTRUCTOR_NAME, INSTRUCTOR_ROLE, CERTIFICATE_TITLE } from "@/data/course";
+import Image from "next/image";
+import { useState } from "react";
+import { courseModules, totalCourseMinutes, INSTRUCTOR_NAME, CERTIFICATE_TITLE } from "@/data/course";
 import { useProgress } from "@/hooks/useProgress";
 import Visual from "@/components/course/Visuals";
+
+/** Shows /images/tony-profile.jpg when the file exists; falls back to an initials badge otherwise. */
+function AuthorAvatar() {
+  const [photoAvailable, setPhotoAvailable] = useState(true);
+
+  if (!photoAvailable) {
+    return (
+      <div
+        aria-hidden
+        className="grid h-28 w-28 shrink-0 place-items-center rounded-full bg-brand-800 text-3xl font-bold text-white"
+      >
+        TH
+      </div>
+    );
+  }
+
+  return (
+    <Image
+      src="/images/tony-profile.jpg"
+      alt="Chân dung Nhan Ha (Tony)"
+      width={112}
+      height={112}
+      loading="eager"
+      onError={() => setPhotoAvailable(false)}
+      className="h-28 w-28 shrink-0 rounded-full border-2 border-brand-200 object-cover"
+    />
+  );
+}
 
 const OUTCOMES = [
   "Giải thích 4 cấp độ Kirkpatrick và chọn KPI phù hợp cho từng cấp",
@@ -217,24 +247,39 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Instructor */}
+      {/* Author */}
       <section className="bg-white py-14">
         <div className="mx-auto max-w-4xl px-4">
-          <div className="flex flex-col items-center gap-6 rounded-2xl border border-slate-200 bg-slate-50 p-8 sm:flex-row">
-            <div
-              aria-hidden
-              className="grid h-28 w-28 shrink-0 place-items-center rounded-full bg-brand-800 text-3xl font-bold text-white"
-            >
-              TH
-            </div>
+          <div className="flex flex-col items-center gap-6 rounded-2xl border border-slate-200 bg-slate-50 p-8 sm:flex-row sm:items-start">
+            <AuthorAvatar />
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-accent-600">Instructor</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-accent-600">Tác giả khóa học</p>
               <h2 className="mt-1 text-xl font-bold text-slate-900">{INSTRUCTOR_NAME}</h2>
-              <p className="text-sm font-medium text-slate-600">{INSTRUCTOR_ROLE}</p>
+              <p className="text-sm font-medium text-slate-600">Một người đam mê phát triển con người</p>
               <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                Tony sẽ hướng dẫn bạn chuyển dữ liệu đào tạo thành những insight rõ ràng, có trách nhiệm và gắn với
-                quyết định kinh doanh. Khóa học tập trung vào cách đo lường thực tế, không chỉ báo cáo số lượng lớp học
-                hoặc tỷ lệ hoàn thành.
+                Tony không tự nhận mình là chuyên gia — chỉ là một người làm nghề L&amp;D nhiều năm, từng loay hoay
+                trước câu hỏi &ldquo;đào tạo này mang lại gì?&rdquo; và tự mày mò tìm cách trả lời bằng dữ liệu. Khóa
+                học này là những gì Tony ước có ai đó chỉ cho mình từ những ngày đầu: cách đo lường thực tế, trung
+                thực với giới hạn của dữ liệu, và luôn bắt đầu từ con người thay vì con số.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+                <a
+                  href="mailto:nhanhd.1505@gmail.com"
+                  className="font-medium text-brand-700 hover:underline"
+                >
+                  ✉ nhanhd.1505@gmail.com
+                </a>
+                <a
+                  href="https://github.com/hydezz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-brand-700 hover:underline"
+                >
+                  ⌂ github.com/hydezz
+                </a>
+              </div>
+              <p className="mt-2 text-xs text-slate-400">
+                Mọi góp ý về nội dung khóa học đều được chào đón — hãy viết thư cho Tony.
               </p>
             </div>
           </div>

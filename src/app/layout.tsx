@@ -20,7 +20,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="mx-auto max-w-7xl px-4 text-center text-sm text-slate-500">
               <p className="font-medium text-slate-700">Measure Training Impact with Kirkpatrick, Excel and AI</p>
               <p className="mt-1">
-                Instructor: Nhan Ha (Tony), MBA, SHRM-CP · Learning &amp; Talent Development Leader
+                Tác giả: Nhan Ha (Tony) — một người đam mê phát triển con người ·{" "}
+                <a href="mailto:nhanhd.1505@gmail.com" className="text-brand-700 hover:underline">
+                  nhanhd.1505@gmail.com
+                </a>
               </p>
               <p className="mt-1 text-xs">Dữ liệu thực hành là dữ liệu giả lập — không chứa thông tin cá nhân thật.</p>
             </div>

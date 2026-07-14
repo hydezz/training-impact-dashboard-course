@@ -165,7 +165,7 @@ export default function CertificatePage() {
 
             <div className="mx-auto mt-8 max-w-md border-t border-slate-200 pt-4">
               <p className="font-semibold text-slate-800">{INSTRUCTOR_NAME}</p>
-              <p className="text-xs text-slate-500">{INSTRUCTOR_ROLE} · Instructor</p>
+              <p className="text-xs text-slate-500">{INSTRUCTOR_ROLE} · Course Author</p>
             </div>
 
             <div className="mt-6">
